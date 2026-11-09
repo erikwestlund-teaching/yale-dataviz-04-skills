@@ -1,0 +1,261 @@
+{
+    "name": "Yale Data Viz 04: Skills",
+    "spec_version": 1,
+    "author": {
+        "name": "Erik",
+        "email": "ewestlund@jhu.edu",
+        "affiliation": "Johns Hopkins Bloomberg School of Public Health",
+        "url": "https://erikwestlund.academic.page",
+        "affiliations": [
+            {
+                "city": "Baltimore",
+                "name": "Johns Hopkins Bloomberg School of Public Health",
+                "country": "United States",
+                "department": "Department of Biostatistics"
+            }
+        ]
+    },
+    "layers": [
+        {
+            "kind": "base",
+            "key": "framework/project",
+            "version": 4,
+            "layer": {
+                "git": {
+                    "gitignore_content": "# Private data and credentials\n**/private/**\n**/*_private/**\n.env\n.env.*\n!.env.example\n.Renviron\n**/credentials/**\n**/secrets/**\n\n# Local records and caches\nframework.db\nframework.db-wal\nframework.db-shm\n.DS_Store\n\n# Analysis scratch work\n/scratch/\n/cache/\n"
+                },
+                "type": "project",
+                "quarto": {
+                    "render_dir": "outputs/notebooks"
+                },
+                "directories": {
+                    "docs": "docs",
+                    "cache": "outputs/cache",
+                    "scratch": "scratch",
+                    "scripts": "scripts",
+                    "functions": "functions",
+                    "notebooks": "notebooks",
+                    "inputs_raw": "inputs/raw",
+                    "inputs_final": "inputs/final",
+                    "outputs_models": "outputs/models",
+                    "outputs_tables": "outputs/tables",
+                    "outputs_figures": "outputs/figures",
+                    "outputs_reports": "outputs/reports",
+                    "inputs_intermediate": "inputs/intermediate"
+                },
+                "render_dirs": {
+                    "docs": "outputs/docs",
+                    "notebooks": "outputs/notebooks"
+                },
+                "settings_layout": "split"
+            }
+        },
+        {
+            "kind": "facet",
+            "key": "framework/quarto",
+            "version": 1,
+            "layer": {
+                "tools": {
+                    "quarto": true
+                }
+            }
+        },
+        {
+            "kind": "facet",
+            "key": "framework/tidyverse-extended",
+            "version": 1,
+            "layer": {
+                "packages": {
+                    "default_packages": {
+                        "glue": {
+                            "source": "cran",
+                            "auto_attach": false
+                        },
+                        "dplyr": {
+                            "source": "cran",
+                            "auto_attach": true
+                        },
+                        "haven": {
+                            "source": "cran",
+                            "auto_attach": false
+                        },
+                        "purrr": {
+                            "source": "cran",
+                            "auto_attach": true
+                        },
+                        "readr": {
+                            "source": "cran",
+                            "auto_attach": false
+                        },
+                        "tidyr": {
+                            "source": "cran",
+                            "auto_attach": true
+                        },
+                        "readxl": {
+                            "source": "cran",
+                            "auto_attach": false
+                        },
+                        "scales": {
+                            "source": "cran",
+                            "auto_attach": false
+                        },
+                        "forcats": {
+                            "source": "cran",
+                            "auto_attach": true
+                        },
+                        "ggplot2": {
+                            "source": "cran",
+                            "auto_attach": true
+                        },
+                        "janitor": {
+                            "source": "cran",
+                            "auto_attach": false
+                        },
+                        "stringr": {
+                            "source": "cran",
+                            "auto_attach": true
+                        },
+                        "lubridate": {
+                            "source": "cran",
+                            "auto_attach": true
+                        },
+                        "patchwork": {
+                            "source": "cran",
+                            "auto_attach": false
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "kind": "facet",
+            "key": "framework/workflow-quarto",
+            "version": 1,
+            "layer": {
+                "scaffold": {
+                    "workflow": "quarto",
+                    "notebook_format": "quarto"
+                }
+            }
+        },
+        {
+            "kind": "blueprint",
+            "key": "yale-data-viz-04-skills",
+            "layer": {
+                "ai": {
+                    "enabled": true
+                },
+                "git": {
+                    "use_git": true
+                },
+                "skills": {
+                    "viz-house-style": {
+                        "sync": {
+                            "hash": "3a46bda8c934346bec32ee48b7fcec5d44793614dae30bc2f9509e46f9d8951f",
+                            "server": "https://framework.pub",
+                            "variant": "r",
+                            "version": 1,
+                            "skill_id": "92fd7280-2c19-4f17-8422-bfc155084ac1"
+                        },
+                        "bundle": [
+                            {
+                                "path": "SKILL.md",
+                                "content": "LS0tCm5hbWU6IHZpei1ob3VzZS1zdHlsZQpkZXNjcmlwdGlvbjogSG91c2Ugc3R5bGUgZm9yIGdncGxvdDIgZmlndXJlcyBtZWFudCBmb3IgYW4gYXVkaWVuY2UgKGEgcmVwb3J0LCBzbGlkZXMsIG9yIGEgcGFwZXIpLiBVc2Ugd2hlbmV2ZXIgbWFraW5nLCBwb2xpc2hpbmcsIG9yIGRlc2NyaWJpbmcgYSBmaWd1cmUgc29tZW9uZSBlbHNlIHdpbGwgcmVhZC4KLS0tCgojIEZpZ3VyZSBob3VzZSBzdHlsZQoKRm9sbG93IHRoZXNlIHJ1bGVzIGZvciBhbnkgZmlndXJlIG1lYW50IGZvciBhbiBhdWRpZW5jZS4gRm9yIHF1aWNrIGV4cGxvcmF0b3J5IHBsb3RzLCBza2lwIHRoZSBwb2xpc2ggYnV0IGtlZXAgdGhlIGhvbmVzdHkgcnVsZXMuCgojIyBDaG9vc2UgdGhlIGNoYXJ0IGZyb20gdGhlIHF1ZXN0aW9uCgotIEJlZm9yZSBwbG90dGluZywgc3RhdGUgaW4gb25lIHNlbnRlbmNlIHRoZSBxdWVzdGlvbiB0aGUgZmlndXJlIGFuc3dlcnMuCi0gUHV0IHRoZSB2YWx1ZXMgcGVvcGxlIG11c3QgY29tcGFyZSBvbiBhICoqY29tbW9uIHNjYWxlKiogKHBvc2l0aW9uIG9uIHRoZSBzYW1lIGF4aXMpLiBQcmVmZXIgb3JkZXJlZCBiYXJzIG9yIGRvdCBwbG90cyB0byBwaWUgY2hhcnRzIGFuZCBzdGFja2VkIGJhcnMuCi0gT3JkZXIgY2F0ZWdvcmllcyBieSB2YWx1ZSwgbm90IGFscGhhYmV0aWNhbGx5LCB1bmxlc3MgdGhlIG9yZGVyIGhhcyBtZWFuaW5nLgotIFdoZW4gZ3JvdXBzIGNyb3dkIG9uZSBwYW5lbCwgdXNlIHNtYWxsIG11bHRpcGxlcyAoYGZhY2V0X3dyYXAoKWApIHdpdGggc2hhcmVkIGF4ZXMuCgojIyBIb25lc3Qgc2NhbGVzCgotIEJhciBjaGFydHMgc3RhcnQgYXQgemVyby4gRG90IHBsb3RzIGFuZCBsaW5lcyBkb24ndCBoYXZlIHRvLgotIFVzZSBhIGxvZyBzY2FsZSBmb3IgdmFsdWVzIHRoYXQgc3BhbiBvcmRlcnMgb2YgbWFnbml0dWRlLCBhbmQgc2F5IHNvIGluIHRoZSBheGlzIGxhYmVsLgotIFNob3cgdGhlIGRhdGEsIG5vdCBqdXN0IGEgc3VtbWFyeTogYWRkIHBvaW50cyBvciBhIGRpc3RyaWJ1dGlvbiBiZWhpbmQgbWVhbnMgYW5kIG1vZGVsIGxpbmVzLgoKIyMgVGV4dAoKLSBUaGUgdGl0bGUgKipzdGF0ZXMgdGhlIGZpbmRpbmcqKiBpbiBwbGFpbiB3b3Jkcy4gR29vZDogIkluZmFudCBtb3J0YWxpdHkgZmFsbHMgYXMgR0RQIHBlciBjYXBpdGEgcmlzZXMiLiBCYWQ6ICJpbmZhbnRfbW9ydGFsaXR5IHZzIGdkcCIuCi0gQXhpcyBsYWJlbHMgbmFtZSB0aGUgcXVhbnRpdHkgYW5kIGl0cyB1bml0cywgZS5nLiAiR0RQIHBlciBjYXBpdGEgKFVTJCwgbG9nIHNjYWxlKSIuCi0gTGFiZWwgbGluZXMgYW5kIGdyb3VwcyBkaXJlY3RseSBvbiB0aGUgcGxvdCBpbnN0ZWFkIG9mIHVzaW5nIGEgbGVnZW5kIHdoZW4gdGhlcmUgYXJlIGZldyBvZiB0aGVtLgotIEFkZCBhIGNhcHRpb24gdGhhdCBzdGFydHMgd2l0aCAiU291cmNlOiAiLgoKIyMgQ29sb3IKCi0gVXNlIGNvbG9yIG9ubHkgdG8gY2FycnkgbWVhbmluZy4gSGlnaGxpZ2h0IHdoYXQgbWF0dGVycyBpbiBvbmUgc3Ryb25nIGNvbG9yIGFuZCBsZWF2ZSB0aGUgcmVzdCBncmV5LgotIFVzZSBjb2xvcmJsaW5kLXNhZmUgcGFsZXR0ZXMgKGBzY2FsZV9jb2xvcl92aXJpZGlzX2QoKWAgb3IgT2thYmUtSXRvKS4gTmV2ZXIgcmVseSBvbiByZWQgdmVyc3VzIGdyZWVuIGFsb25lLgoKIyMgVGhlbWUKCi0gU3RhcnQgZnJvbSBgdGhlbWVfbWluaW1hbChiYXNlX3NpemUgPSAxNClgLCByZW1vdmUgbWlub3IgZ3JpZGxpbmVzLCBhbmQgcHV0IGFueSBsZWdlbmQgYXQgdGhlIHRvcC4KCiMjIERlc2NyaXB0aW9uCgotIFdyaXRlIHR3byBvciB0aHJlZSBzZW50ZW5jZXMgdGhhdCBkZXNjcmliZSB0aGUgcGF0dGVybiB3aXRob3V0IGNhdXNhbCBsYW5ndWFnZSwgYW5kIG5hbWUgb25lIGxpbWl0YXRpb24gb2YgdGhlIGRhdGEuCgojIyBXaGVuIGRvbmUKClNhdmUgdGhlIGZpZ3VyZSB0byBgb3V0cHV0cy9maWd1cmVzL2Agd2l0aCBgZ2dzYXZlKClgIGF0IGFuIGV4cGxpY2l0IHNpemUsIHRoZW4gbGlzdCB3aGljaCBvZiB0aGVzZSBydWxlcyB5b3UgZm9sbG93ZWQgYW5kIHdoaWNoIHlvdSBjb3VsZG4ndC4=",
+                                "executable": false
+                            }
+                        ],
+                        "content": "---\nname: viz-house-style\ndescription: House style for ggplot2 figures meant for an audience (a report, slides, or a paper). Use whenever making, polishing, or describing a figure someone else will read.\n---\n\n# Figure house style\n\nFollow these rules for any figure meant for an audience. For quick exploratory plots, skip the polish but keep the honesty rules.\n\n## Choose the chart from the question\n\n- Before plotting, state in one sentence the question the figure answers.\n- Put the values people must compare on a **common scale** (position on the same axis). Prefer ordered bars or dot plots to pie charts and stacked bars.\n- Order categories by value, not alphabetically, unless the order has meaning.\n- When groups crowd one panel, use small multiples (`facet_wrap()`) with shared axes.\n\n## Honest scales\n\n- Bar charts start at zero. Dot plots and lines don't have to.\n- Use a log scale for values that span orders of magnitude, and say so in the axis label.\n- Show the data, not just a summary: add points or a distribution behind means and model lines.\n\n## Text\n\n- The title **states the finding** in plain words. Good: \"Infant mortality falls as GDP per capita rises\". Bad: \"infant_mortality vs gdp\".\n- Axis labels name the quantity and its units, e.g. \"GDP per capita (US$, log scale)\".\n- Label lines and groups directly on the plot instead of using a legend when there are few of them.\n- Add a caption that starts with \"Source: \".\n\n## Color\n\n- Use color only to carry meaning. Highlight what matters in one strong color and leave the rest grey.\n- Use colorblind-safe palettes (`scale_color_viridis_d()` or Okabe-Ito). Never rely on red versus green alone.\n\n## Theme\n\n- Start from `theme_minimal(base_size = 14)`, remove minor gridlines, and put any legend at the top.\n\n## Description\n\n- Write two or three sentences that describe the pattern without causal language, and name one limitation of the data.\n\n## When done\n\nSave the figure to `outputs/figures/` with `ggsave()` at an explicit size, then list which of these rules you followed and which you couldn't."
+                    }
+                },
+                "security": {
+                    "sensitive": false
+                },
+                "core_files": false,
+                "settings_layout": "flat"
+            }
+        },
+        {
+            "kind": "settings",
+            "key": "your defaults",
+            "layer": {
+                "scaffold": {
+                    "ide": "vscode",
+                    "seed_on_scaffold": true,
+                    "seed": "123",
+                    "set_theme_on_scaffold": false,
+                    "ggplot_theme": "theme_minimal",
+                    "source_all_functions": true
+                },
+                "ai": {
+                    "assistants": {
+                        "claude": true,
+                        "codex": true,
+                        "copilot": false
+                    }
+                }
+            }
+        },
+        {
+            "kind": "project",
+            "key": "yale-data-viz-04-skills choices",
+            "layer": {
+                "skills": {
+                    "framework-data": null,
+                    "framework-outputs": null,
+                    "framework-packages": null,
+                    "framework-workflow": null,
+                    "ggplot2-exploring": null,
+                    "ggplot2-publishing": null
+                }
+            }
+        },
+        {
+            "kind": "project",
+            "key": "yale-data-viz-04-skills",
+            "layer": {
+                "language": "r",
+                "tools": {
+                    "quarto": true,
+                    "quarto_manuscript": false,
+                    "quarto_slides": false,
+                    "jupyter": false,
+                    "targets": false,
+                    "renv": false
+                }
+            }
+        }
+    ],
+    "source": {
+        "origin": "cloud",
+        "blueprint": {
+            "key": "yale-data-viz-04-skills",
+            "version": 1
+        },
+        "fragments": [
+            {
+                "kind": "base",
+                "key": "framework/project",
+                "version": 4
+            },
+            {
+                "kind": "facet",
+                "key": "framework/quarto",
+                "version": 1
+            },
+            {
+                "kind": "facet",
+                "key": "framework/tidyverse-extended",
+                "version": 1
+            },
+            {
+                "kind": "facet",
+                "key": "framework/workflow-quarto",
+                "version": 1
+            },
+            {
+                "kind": "blueprint",
+                "key": "yale-data-viz-04-skills"
+            }
+        ]
+    }
+}
