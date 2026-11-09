@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "skills": {
+    "account:https://framework.pub:92fd7280-2c19-4f17-8422-bfc155084ac1:r": {
+      "paths": [
+        ".claude/skills/viz-house-style",
+        ".agents/skills/viz-house-style"
+      ],
+      "variant": "r",
+      "hash": "3a46bda8c934346bec32ee48b7fcec5d44793614dae30bc2f9509e46f9d8951f",
+      "server": "https://framework.pub",
+      "version": 1,
+      "skill_id": "92fd7280-2c19-4f17-8422-bfc155084ac1"
+    }
+  }
+}
