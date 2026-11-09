@@ -22,8 +22,8 @@ Follow these rules for any figure meant for an audience. For quick exploratory p
 
 ## Text
 
-- The title **states the finding** in plain words. Good: "Infant mortality falls as GDP per capita rises". Bad: "infant_mortality vs gdp".
-- Axis labels name the quantity and its units, e.g. "GDP per capita (US$, log scale)".
+- The title **states the finding** in plain words. Good: "Flu vaccination is lowest among adults 18–49". Bad: "estimate by age_group".
+- Axis labels name the quantity and its units, e.g. "Vaccination coverage (%)" or "Population (millions, log scale)".
 - Label lines and groups directly on the plot instead of using a legend when there are few of them.
 - Add a caption that starts with "Source: ".
 

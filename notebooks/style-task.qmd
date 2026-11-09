@@ -1,0 +1,21 @@
+---
+title: "Style Task"
+---
+
+## Task
+
+Using `inputs/raw/infant_mortality_countries.csv` (see `inputs/raw/codebooks/infant_mortality_countries.md`), make one figure for a short report that shows how infant mortality (`infant_mortality_per_1000`) relates to income per capita (`income_usd_per_capita`) across countries, and write two sentences describing it.
+
+```{r}
+library(tidyverse)
+
+countries <- read_csv(here::here("inputs/raw/infant_mortality_countries.csv"), show_col_types = FALSE)
+```
+
+## Figure
+
+```{r}
+
+```
+
+## Description
