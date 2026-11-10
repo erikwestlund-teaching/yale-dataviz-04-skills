@@ -4,13 +4,23 @@ Part of the workshop **Data Visualization With AI**. Prompts are on the workshop
 
 This project has a **skill**, `viz-house-style`: house rules for figures meant for an audience. It's in `.agents/skills/` (read by Posit Assistant and Codex) and `.claude/skills/` (read by Claude Code). In RStudio, use **More → Show Hidden Files** to see them.
 
+## Install packages
+
+Run this once in the R console, from the project folder:
+
+```r
+source("setup.R")
+```
+
+It installs any of this project's packages that are missing: tidyverse, rmarkdown, here, scales, ggrepel.
+
 ## Open the project
 
 - **RStudio:** open the `.Rproj` file.
 - **Positron or VS Code:** open this folder.
 - **Claude Code or Codex:** start the tool from a terminal in this folder.
 
-You need R with **tidyverse**, **here**, and **rmarkdown**, and Quarto (bundled with RStudio).
+You need R and Quarto (bundled with RStudio and Positron). `setup.R` installs the packages.
 
 ## Steps
 
