@@ -4,7 +4,7 @@ Part of the workshop **Data Visualization With AI**. Prompts are on the workshop
 
 This project has a **skill**, `viz-house-style`: house rules for figures meant for an audience. It's in `.agents/skills/` (read by Posit Assistant and Codex) and `.claude/skills/` (read by Claude Code). In RStudio, use **More → Show Hidden Files** to see them.
 
-## Install packages
+## Installing packages
 
 Run this once in the R console, from the project folder:
 
@@ -14,7 +14,7 @@ source("setup.R")
 
 It installs any of this project's packages that are missing: readr, dplyr, ggplot2, scales, ggrepel, stringr, here, rmarkdown.
 
-## Open the project
+## Opening the project
 
 - **RStudio:** open the `.Rproj` file.
 - **Positron or VS Code:** open this folder.
@@ -24,18 +24,18 @@ You need R and Quarto (bundled with RStudio and Positron). `setup.R` installs th
 
 ## Steps
 
-1. In Exercise 1, which has no skill, give your assistant this prompt and keep the figure:
+1. In Exercise 1, which has no skill, start a fresh session (in Claude Code, type `/clear`). Give your assistant this prompt and keep the figure:
 
    ```text
    Complete the task in notebooks/style-task.qmd and render it.
    ```
 
 2. Give the **same prompt** here. Don't mention the skill.
-3. Compare the two figures against the rules in `SKILL.md`. Which did it follow? Which did it skip?
+3. Compare the two figures against the rules in `SKILL.md`. Assistants often write titles that state the finding without being asked, so first note which rules the Exercise 1 figure already met. The skill shows most in color, direct labels, text size, and saving the figure.
 4. Change one rule to match your own style and run it again.
 
-A skill makes your style more likely. It doesn't guarantee it.
+A skill makes your style more likely, but it doesn't guarantee it.
 
-## About the folders
+## Folder layout
 
-This project was created from a [Framework](https://framework.pub) blueprint, so it has the layout of a real analysis project: data in `inputs/raw/` (codebooks in `inputs/raw/codebooks/`), your notebooks in `notebooks/`, and results in `outputs/`. `docs/reference/` holds worked reference notebooks from Erik's data visualization course; compare them with what your assistant produces. You don't need the framework R package.
+This project was created from a [Framework](https://framework.pub) blueprint, so it has the layout of a real analysis project: data in `inputs/raw/` (codebooks in `inputs/raw/codebooks/`), your notebooks in `notebooks/`, and results in `outputs/`. `docs/reference/` holds worked reference notebooks from Erik's data visualization course. Compare them with what your assistant produces. You don't need the framework R package.
